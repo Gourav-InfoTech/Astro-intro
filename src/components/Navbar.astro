@@ -1,0 +1,48 @@
+---
+
+const NAVS:{
+  label:string;
+  route:string;
+}[] = [
+  {
+    label:"Home",
+    route:"/"
+  },{
+    label:"About",
+    route:"/about"
+  },{
+     label:"Contact",
+    route:"/contact"
+  }
+  ];
+---
+
+  <div class="main">
+    <ul class="link-list">
+      {NAVS.map((i,indx)=>{
+       return <a key={indx} href={i.route}><li class="links">{i.label}</li></a>
+      })}
+    </ul>
+  </div>
+
+<style lang="scss">
+.main{
+  height:60px;
+  background-color:#cecece;
+  margin:auto 0;
+}
+  .links{
+    list-style:none;
+    font-weight:600;
+
+    &:focus{
+      cursor:pointer
+    }
+  }
+  .link-list{
+    display:flex;
+    gap:10px;
+
+  }
+</style>
+

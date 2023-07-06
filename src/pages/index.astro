@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Counter from '../components/Counter.tsx'
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div>
+				<h1 class="font-bold text-xl underline">Home</h1>
+				<Counter client:load/>
+		</div>
+	</main>
+</Layout>
+<style>
+</style>
